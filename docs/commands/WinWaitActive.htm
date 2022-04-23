@@ -52,7 +52,7 @@
 <div class="ex" id="ExBasic">
 <p><a class="ex_number" href="#ExBasic"></a> Opens Notepad and waits a maximum of 2 seconds until it is active. If WinWait times out, an error message is shown, otherwise Notepad is minimized.</p>
 <pre>Run, notepad.exe
-WinWaitActive, Untitled - Notepad,, 2
+WinWaitActive, Untitled - Notepad,, 2 ; and not WinWaitActive, A, Untitled - Notepad, 2 as suggested by WinTitle documentation.
 if ErrorLevel
 {
     MsgBox, WinWait timed out.
